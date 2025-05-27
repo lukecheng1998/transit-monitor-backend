@@ -1,4 +1,4 @@
-"""Sends a query to 511.org in order to get the bus stop data from nearby"""
+"""Sends a query to 511.org in order to get the bus stop data from nearby my own location"""
 
 from query_511_helpers import iterate_through_json_extract_useful_data
 import requests
