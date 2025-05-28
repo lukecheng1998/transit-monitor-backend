@@ -137,6 +137,29 @@ def group_data_by_line_bart(list_of_stops):
                     break
     return lines_directory
 
+"""Group the stop data by line so we can easily extract when the next train departs"""
+def group_data_by_line_caltrain(list_of_stops):
+    checked_lines = []
+    lines_directory = []
+    for line in list_of_stops:
+        if not checked_lines.__contains__(line["line_ref"]):
+            checked_lines.append(line["line_ref"])
+            minutes_remaining = calculate_arrival_time(line['expected_departure_time'])
+            line_directory = {"line": line["line_ref"], "destination": line['destination_display'], "departure_time": [minutes_remaining]}
+            lines_directory.append(line_directory)
+        else:
+            minutes_remaining = calculate_arrival_time(line['expected_departure_time'])
+            data = {"line": line["line_ref"]}
+            line_number = data["line"]
+            for record in lines_directory:
+                if line_number == record["line"]:
+                    record["departure_time"].append(minutes_remaining)
+                    #Do we even need this for caltrain
+                    if len(record["departure_time"]) > 2:
+                        record["departure_time"].pop()
+                    break
+    return lines_directory
+
 """Parent function for getting stop data and group by line for Muni"""
 def get_stop_data_and_group_by_line_for_sfmuni(api_key, operator, stop_ids):
     all_muni_lines = []
@@ -154,18 +177,19 @@ def get_stop_data_and_group_by_line_for_bart(api_key, operator, stop_ids):
     return all_bart_lines
 
 
+
 """Parent function for getting stop data and group by line for Caltrain"""
 def get_stop_data_and_group_by_line_for_caltrain(api_key, operator, stop_id):
+    all_caltrain_lines = []
     lines = get_stop_data_off_of_agency(api_key, operator, stop_id)
-    return lines
+    all_caltrain_lines.append(group_data_by_line_caltrain(lines))
+    return all_caltrain_lines
 
 """Write this out to a json file, we'll do an s3 bucket or something afterwards"""
 def get_transit_data_and_write_to_file():
     sf_muni_lines = get_stop_data_and_group_by_line_for_sfmuni(api_key, sf_muni_id, sf_bus_stop_ids)
     caltrain_lines = get_stop_data_and_group_by_line_for_caltrain(api_key, caltrain_id, caltrain_stop_id)
     bart_lines = get_stop_data_and_group_by_line_for_bart(api_key, bart_id, bart_stop_ids)
-    print(sf_muni_lines)
-    print(caltrain_lines)
     if feature_flag:
         ### File write to an s3 bucket here
         return
