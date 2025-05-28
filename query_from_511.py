@@ -123,7 +123,7 @@ def group_data_by_line_bart(list_of_stops):
         if not checked_lines.__contains__(line["line_ref"]):
             checked_lines.append(line["line_ref"])
             minutes_remaining = calculate_arrival_time(line['expected_arrival_time'])
-            line_directory = {"line": line["line_ref"], "line_name": line['published_line_name'], "destination": line['destination_display'], "arrival_time": [minutes_remaining]}
+            line_directory = {"line": line["line_ref"], "destination": line['destination_display'], "arrival_time": [minutes_remaining]}
             lines_directory.append(line_directory)
         else:
             minutes_remaining = calculate_arrival_time(line['expected_arrival_time'])
@@ -150,7 +150,7 @@ def get_stop_data_and_group_by_line_for_bart(api_key, operator, stop_ids):
     all_bart_lines = []
     for stop_id in stop_ids:
         lines = get_stop_data_off_of_agency(api_key, operator, stop_id)
-        all_bart_lines.append(lines)
+        all_bart_lines.append(group_data_by_line_bart(lines))
     return all_bart_lines
 
 
