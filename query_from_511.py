@@ -1,10 +1,12 @@
 """Sends a query to 511.org in order to get the bus stop data from nearby my own location"""
+import json
 
 from query_511_helpers import iterate_through_json_extract_useful_data
 import requests
 import my_decoder
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import ast
 import pytz
 feature_flag = False #feature flag to enable write to s3 bucket
 api_key = "cddee1f5-b926-451b-85ee-a406f9e27153"
@@ -185,11 +187,15 @@ def get_stop_data_and_group_by_line_for_caltrain(api_key, operator, stop_id):
     all_caltrain_lines.append(group_data_by_line_caltrain(lines))
     return all_caltrain_lines
 
+def convert_to_double_quotes(json_string):
+    json_str = json.dumps(json_string, indent=2)
+    return json_str
+
 """Write this out to a json file, we'll do an s3 bucket or something afterwards"""
 def get_transit_data_and_write_to_file():
-    sf_muni_lines = get_stop_data_and_group_by_line_for_sfmuni(api_key, sf_muni_id, sf_bus_stop_ids)
-    caltrain_lines = get_stop_data_and_group_by_line_for_caltrain(api_key, caltrain_id, caltrain_stop_id)
-    bart_lines = get_stop_data_and_group_by_line_for_bart(api_key, bart_id, bart_stop_ids)
+    sf_muni_lines = convert_to_double_quotes(get_stop_data_and_group_by_line_for_sfmuni(api_key, sf_muni_id, sf_bus_stop_ids))
+    caltrain_lines = convert_to_double_quotes(get_stop_data_and_group_by_line_for_caltrain(api_key, caltrain_id, caltrain_stop_id))
+    bart_lines = convert_to_double_quotes(get_stop_data_and_group_by_line_for_bart(api_key, bart_id, bart_stop_ids))
     if feature_flag:
         ### File write to an s3 bucket here
         return

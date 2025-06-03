@@ -1,1 +1,38 @@
-[[{'line': 'Red-S', 'destination': 'SFO Airport / Millbrae', 'arrival_time': [5, 25]}, {'line': 'Green-S', 'destination': 'SF / Daly City', 'arrival_time': [8, 28]}, {'line': 'Yellow-S', 'destination': 'San Francisco International Airport', 'arrival_time': [10, 18]}, {'line': 'Blue-S', 'destination': 'SF / Daly City', 'arrival_time': [15, 35]}], [{'line': 'Red-N', 'destination': 'Richmond', 'arrival_time': [-4, 16]}, {'line': 'Green-N', 'destination': 'Berryessa/North San Jose', 'arrival_time': [1, 21]}, {'line': 'Yellow-N', 'destination': 'Pittsburg / Bay Point', 'arrival_time': [-1, 8]}, {'line': 'Blue-N', 'destination': 'Dublin/Pleasanton', 'arrival_time': [12, 32]}]]
+[
+  [
+    {
+      "line": "Yellow-S",
+      "destination": "San Francisco Int'l Airport/Millbrae",
+      "arrival_time": [
+        3,
+        23
+      ]
+    },
+    {
+      "line": "Blue-S",
+      "destination": "SF / Daly City",
+      "arrival_time": [
+        13,
+        33
+      ]
+    }
+  ],
+  [
+    {
+      "line": "Blue-N",
+      "destination": "Dublin/Pleasanton",
+      "arrival_time": [
+        3,
+        23
+      ]
+    },
+    {
+      "line": "Yellow-N",
+      "destination": "Antioch",
+      "arrival_time": [
+        13,
+        33
+      ]
+    }
+  ]
+]

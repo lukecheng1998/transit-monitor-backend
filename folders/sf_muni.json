@@ -1,1 +1,180 @@
-[[{'line': '38', 'line_name': 'GEARY', 'destination': 'Transit Center', 'arrival_time': [4, 10]}, {'line': '38R', 'line_name': 'GEARY RAPID', 'destination': 'Transit Center', 'arrival_time': [6, 6]}], [{'line': '38R', 'line_name': 'GEARY RAPID', 'destination': '48th Avenue', 'arrival_time': [1, 7]}, {'line': '38', 'line_name': 'GEARY', 'destination': 'V. A. Hospital', 'arrival_time': [10, 17]}], [{'line': '49', 'line_name': 'VAN NESS-MISSION', 'destination': 'North Point & Van Ness', 'arrival_time': [4, 13]}], [{'line': '49', 'line_name': 'VAN NESS-MISSION', 'destination': 'City College', 'arrival_time': [1, 6]}], [{'line': '31', 'line_name': 'BALBOA', 'destination': 'Caltrain', 'arrival_time': [6, 29]}], [{'line': '31', 'line_name': 'BALBOA', 'destination': 'Ocean Beach', 'arrival_time': [6, 24]}], [{'line': 'K', 'line_name': 'INGLESIDE', 'destination': 'Embarcadero Station', 'arrival_time': [2, 12]}, {'line': 'N', 'line_name': 'JUDAH', 'destination': 'Caltrain/Ballpark', 'arrival_time': [3, 5]}, {'line': 'J', 'line_name': 'CHURCH', 'destination': 'Embarcadero Station', 'arrival_time': [5, 19]}, {'line': 'L', 'line_name': 'TARAVAL', 'destination': 'Embarcadero Station', 'arrival_time': [10, 16]}, {'line': 'M', 'line_name': 'OCEAN VIEW', 'destination': 'Embarcadero Station', 'arrival_time': [14, 29]}], [{'line': 'M', 'line_name': 'OCEAN VIEW', 'destination': 'Balboa Park via S.F. State', 'arrival_time': [0, 7]}, {'line': 'N', 'line_name': 'JUDAH', 'destination': 'Ocean Beach', 'arrival_time': [2, 5]}, {'line': 'K', 'line_name': 'INGLESIDE', 'destination': 'Balboa Park', 'arrival_time': [3, 10]}, {'line': 'J', 'line_name': 'CHURCH', 'destination': 'Balboa Park', 'arrival_time': [5, 23]}, {'line': 'L', 'line_name': 'TARAVAL', 'destination': 'S.F. Zoo', 'arrival_time': [6, 14]}], [{'line': '5R', 'line_name': 'FULTON RAPID', 'destination': 'Transit Center', 'arrival_time': [14, 26]}, {'line': '5', 'line_name': 'FULTON', 'destination': 'Transit Center', 'arrival_time': [14, 25]}], [{'line': '5R', 'line_name': 'FULTON RAPID', 'destination': 'Ocean Beach', 'arrival_time': [5, 17]}, {'line': '5', 'line_name': 'FULTON', 'destination': '6th Av + Fulton', 'arrival_time': [8, 21]}]]
+[
+  [
+    {
+      "line": "38",
+      "line_name": "GEARY",
+      "destination": "Transit Center",
+      "arrival_time": [
+        10,
+        20
+      ]
+    }
+  ],
+  [
+    {
+      "line": "38",
+      "line_name": "GEARY",
+      "destination": "Lands End - 48th Avenue",
+      "arrival_time": [
+        5,
+        19
+      ]
+    }
+  ],
+  [
+    {
+      "line": "49",
+      "line_name": "VAN NESS-MISSION",
+      "destination": "North Point & Van Ness",
+      "arrival_time": [
+        5,
+        16
+      ]
+    },
+    {
+      "line": "90",
+      "line_name": "SAN BRUNO OWL",
+      "destination": "North Point + Van Ness",
+      "arrival_time": [
+        115
+      ]
+    }
+  ],
+  [
+    {
+      "line": "49",
+      "line_name": "VAN NESS-MISSION",
+      "destination": "City College",
+      "arrival_time": [
+        8,
+        18
+      ]
+    },
+    {
+      "line": "90",
+      "line_name": "SAN BRUNO OWL",
+      "destination": "Visitacion Valley",
+      "arrival_time": [
+        105
+      ]
+    }
+  ],
+  [],
+  [],
+  [
+    {
+      "line": "K",
+      "line_name": "INGLESIDE",
+      "destination": "Embarcadero Station",
+      "arrival_time": [
+        6,
+        24
+      ]
+    },
+    {
+      "line": "J",
+      "line_name": "CHURCH",
+      "destination": "Embarcadero Station",
+      "arrival_time": [
+        10,
+        28
+      ]
+    },
+    {
+      "line": "N",
+      "line_name": "JUDAH",
+      "destination": "Caltrain/Ballpark",
+      "arrival_time": [
+        11,
+        21
+      ]
+    },
+    {
+      "line": "L",
+      "line_name": "TARAVAL",
+      "destination": "Embarcadero Station",
+      "arrival_time": [
+        12,
+        31
+      ]
+    },
+    {
+      "line": "M",
+      "line_name": "OCEAN VIEW",
+      "destination": "Embarcadero Station",
+      "arrival_time": [
+        19,
+        21
+      ]
+    }
+  ],
+  [
+    {
+      "line": "N",
+      "line_name": "JUDAH",
+      "destination": "Ocean Beach",
+      "arrival_time": [
+        1,
+        20
+      ]
+    },
+    {
+      "line": "K",
+      "line_name": "INGLESIDE",
+      "destination": "Balboa Park",
+      "arrival_time": [
+        2,
+        21
+      ]
+    },
+    {
+      "line": "J",
+      "line_name": "CHURCH",
+      "destination": "Balboa Park",
+      "arrival_time": [
+        5,
+        28
+      ]
+    },
+    {
+      "line": "L",
+      "line_name": "TARAVAL",
+      "destination": "S.F. Zoo",
+      "arrival_time": [
+        10,
+        28
+      ]
+    },
+    {
+      "line": "M",
+      "line_name": "OCEAN VIEW",
+      "destination": "Balboa Park via S.F. State",
+      "arrival_time": [
+        13,
+        35
+      ]
+    }
+  ],
+  [
+    {
+      "line": "5",
+      "line_name": "FULTON",
+      "destination": "Market + 4th Street",
+      "arrival_time": [
+        10,
+        21
+      ]
+    }
+  ],
+  [
+    {
+      "line": "5",
+      "line_name": "FULTON",
+      "destination": "Ocean Beach",
+      "arrival_time": [
+        13,
+        35
+      ]
+    }
+  ]
+]

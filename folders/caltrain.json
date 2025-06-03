@@ -1,1 +1,12 @@
-[[{'line': 'Express', 'destination': 'San Jose Diridon', 'departure_time': [14, 74]}, {'line': 'Local Weekday', 'destination': 'San Jose Diridon', 'departure_time': [19, 49]}, {'line': 'Limited', 'destination': 'San Jose Diridon', 'departure_time': [42]}]]
+[
+  [
+    {
+      "line": "Local Weekday",
+      "destination": "Tamien",
+      "departure_time": [
+        14,
+        44
+      ]
+    }
+  ]
+]
